@@ -3,30 +3,31 @@ package stackingItems;
 import shapes.Rectangle;
 
 /**
- * Representa la tapa de una taza.
- * Tiene altura fija de 1 cm y el mismo ancho que su taza asociada.
+ * Representa la tapa base de una taza.
+ * Clase base para los demás tipos de tapa.
+ * Altura fija de 1 cm, mismo ancho que su taza asociada.
  *
- * @David Contreras Y Cristian Moreno
- * @version 1.0
+ * @author David Contreras y Cristian Moreno
+ * @version 2.0
  */
 public class Lid {
 
     private int number;
     private int width;
-    private Rectangle rectangle;
+    protected Rectangle rectangle;
 
     private int xPosition;
     private int yPosition;
 
-    private static final int HEIGHT       = 1;   // altura en cm
-    private static final int SCALE        = 5;   // px por cm
-    private static final int RECT_DEFAULT = 20;  // posición por defecto del Rectangle en BlueJ
+    protected static final int HEIGHT       = 1;
+    protected static final int SCALE        = 5;
+    private   static final int RECT_DEFAULT = 20;
 
     /**
      * Crea una tapa para la taza número n con el ancho dado.
      *
      * @param number número de la taza a la que pertenece
-     * @param width  ancho en píxeles (debe coincidir con el de la taza)
+     * @param width  ancho en píxeles
      */
     public Lid(int number, int width) {
         this.number = number;
@@ -35,13 +36,20 @@ public class Lid {
         rectangle = new Rectangle();
         rectangle.changeSize(HEIGHT * SCALE, width);
 
-        // El Rectangle de BlueJ nace en (RECT_DEFAULT, RECT_DEFAULT)
         xPosition = RECT_DEFAULT;
         yPosition = RECT_DEFAULT;
     }
 
     /**
-     * Asigna el color de la tapa (debe ser el mismo que el de su taza).
+     * Retorna el tipo de la tapa.
+     * Las subclases sobreescriben este método.
+     *
+     * @return tipo de tapa ("normal", "fearful", "crazy", etc.)
+     */
+    public String getType() { return "normal"; }
+
+    /**
+     * Asigna el color de la tapa.
      *
      * @param color nombre del color
      */
@@ -49,17 +57,41 @@ public class Lid {
         rectangle.changeColor(color);
     }
 
-    /** @return número de la taza a la que pertenece esta tapa */
+    /** @return número de la taza asociada */
     public int getNumber() { return number; }
 
-    /** @return ancho de la tapa en píxeles */
+    /** @return ancho en píxeles */
     public int getWidth()  { return width;  }
 
-    /** @return altura de la tapa en cm */
+    /** @return altura en cm (siempre 1) */
     public int getHeight() { return HEIGHT; }
 
     /**
-     * Mueve la tapa de modo que su esquina superior-izquierda quede en (x, y).
+     * Indica si esta tapa puede ser agregada a la torre.
+     * Por defecto retorna true; las subclases pueden restringirlo.
+     *
+     * @param tower la torre donde se intenta agregar
+     * @param cup   la taza compañera
+     * @return true si la tapa puede entrar
+     */
+    public boolean canBeAdded(Tower tower, Cup cup) {
+        return true;
+    }
+
+    /**
+     * Indica si esta tapa puede ser removida de la torre.
+     * Por defecto retorna true; las subclases pueden restringirlo.
+     *
+     * @param tower la torre de donde se intenta remover
+     * @param cup   la taza que actualmente tapa
+     * @return true si la tapa puede salir
+     */
+    public boolean canBeRemoved(Tower tower, Cup cup) {
+        return true;
+    }
+
+    /**
+     * Mueve la tapa a la posición (x, y).
      *
      * @param x coordenada X
      * @param y coordenada Y
@@ -67,10 +99,8 @@ public class Lid {
     public void setPosition(int x, int y) {
         int deltaX = x - xPosition;
         int deltaY = y - yPosition;
-
         rectangle.moveHorizontal(deltaX);
         rectangle.moveVertical(deltaY);
-
         xPosition = x;
         yPosition = y;
     }
