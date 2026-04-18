@@ -1,5 +1,5 @@
 package Test;
-import stackingItems.TowerContest;
+import Contest.TowerContest;
 
 
 import org.junit.Test;
@@ -32,10 +32,8 @@ public class TowerContestCTest {
         return pos == n;
     }
 
-    // ------------------------------------------------------------------ //
-    //  Muestras del enunciado                                            //
-    // ------------------------------------------------------------------ //
-
+  
+    //  Muestras del enunciado                                            
     @Test
     public void marathonSample1() {
         String r = TowerContest.solve(4, 9);
@@ -48,10 +46,8 @@ public class TowerContestCTest {
         assertEquals("impossible", TowerContest.solve(4, 100));
     }
 
-    // ------------------------------------------------------------------ //
-    //  Frontera inferior                                                  //
-    // ------------------------------------------------------------------ //
-
+   
+    //  Frontera inferior                                                
     @Test
     public void singleCupH1() {
         assertEquals("1", TowerContest.solve(1, 1));
