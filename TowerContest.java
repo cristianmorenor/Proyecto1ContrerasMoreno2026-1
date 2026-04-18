@@ -1,5 +1,5 @@
-package stackingItems;
-
+package Contest;
+import stackingItems.Tower;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -33,10 +33,8 @@ import java.util.List;
  */
 public class TowerContest {
 
-    // ------------------------------------------------------------------ //
+    
     //  REQ 14 — solve                                                     //
-    // ------------------------------------------------------------------ //
-
     /**
      * Resuelve el problema de la maraton.
      * La entrada y salida corresponden exactamente al enunciado del ICPC.
@@ -58,10 +56,8 @@ public class TowerContest {
         return sb.toString();
     }
 
-    // ------------------------------------------------------------------ //
-    //  REQ 15 — simulate                                                  //
-    // ------------------------------------------------------------------ //
-
+    
+    //  REQ 15 — simulate                                                 
     /**
      * Simula visualmente la solucion usando Tower.
      * Tower se usa SOLO para visualizar, nunca para calcular la solucion.
@@ -118,10 +114,8 @@ public class TowerContest {
         );
     }
 
-    // ------------------------------------------------------------------ //
-    //  PRIVADOS - logica del solver                                       //
-    // ------------------------------------------------------------------ //
-
+   
+    //logica del solver                                     
     /**
      * Busca el orden de colocacion para lograr la altura h con n tazas.
      *
@@ -261,10 +255,8 @@ public class TowerContest {
     }
 
 
-    // ------------------------------------------------------------------ //
-    //  PRIVADOS - utilidades                                              //
-    // ------------------------------------------------------------------ //
-
+    
+    //Utilidades                                           
     private static void pauseMs(int ms) {
         double start = System.currentTimeMillis();
         while (System.currentTimeMillis() - start < ms) {

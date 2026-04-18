@@ -1,4 +1,6 @@
-package stackingItems;
+package Test;
+import stackingItems.TowerContest;
+
 
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -11,11 +13,6 @@ import static org.junit.Assert.*;
  * @version 1.0
  */
 public class TowerContestTest {
-
-    // ------------------------------------------------------------------ //
-    //  Helper                                                             //
-    // ------------------------------------------------------------------ //
-
     /**
      * Verifica que el resultado de solve sea una permutacion valida:
      * exactamente n alturas impares distintas entre 1 y 2n-1.
@@ -39,10 +36,8 @@ public class TowerContestTest {
         return pos == n;
     }
 
-    // ------------------------------------------------------------------ //
-    //  REQ 14 — ejemplos del enunciado de la maraton                     //
-    // ------------------------------------------------------------------ //
-
+ 
+    //  REQ 14 — ejemplos del enunciado de la maraton                     
     @Test
     public void shouldSolveSampleOne() {
         String result = TowerContest.solve(4, 9);
@@ -55,10 +50,8 @@ public class TowerContestTest {
         assertEquals("impossible", TowerContest.solve(4, 100));
     }
 
-    // ------------------------------------------------------------------ //
+ 
     //  REQ 14 — n = 1                                                    //
-    // ------------------------------------------------------------------ //
-
     @Test
     public void shouldSolveNEquals1() {
         assertEquals("1", TowerContest.solve(1, 1));
@@ -69,10 +62,8 @@ public class TowerContestTest {
         assertEquals("impossible", TowerContest.solve(1, 2));
     }
 
-    // ------------------------------------------------------------------ //
-    //  REQ 14 — altura minima                                            //
-    // ------------------------------------------------------------------ //
-
+  
+    // REQ 14 — altura minima                                          
     @Test
     public void shouldSolveMinHeightN4() {
         String result = TowerContest.solve(4, 7);
@@ -87,10 +78,7 @@ public class TowerContestTest {
         assertTrue(isValidResult(5, result));
     }
 
-    // ------------------------------------------------------------------ //
-    //  REQ 14 — altura maxima                                            //
-    // ------------------------------------------------------------------ //
-
+    // REQ 14 — altura maxima 
     @Test
     public void shouldSolveMaxHeightN4() {
         // max para n=4: (3)^2+1 = 10
@@ -107,10 +95,8 @@ public class TowerContestTest {
         assertTrue(isValidResult(5, result));
     }
 
-    // ------------------------------------------------------------------ //
-    //  REQ 14 — casos imposibles                                         //
-    // ------------------------------------------------------------------ //
-
+  
+    //  REQ 14 — casos imposibles                                         
     @Test
     public void shouldReturnImpossibleBelowMin() {
         assertEquals("impossible", TowerContest.solve(5, 8));
@@ -144,10 +130,8 @@ public class TowerContestTest {
         assertEquals("impossible", TowerContest.solve(3, 0));
     }
 
-    // ------------------------------------------------------------------ //
-    //  REQ 14 — alturas intermedias n=5                                  //
-    // ------------------------------------------------------------------ //
-
+  
+    //  REQ 14 — alturas intermedias n=5                                  
     @Test
     public void shouldSolveH10N5() {
         String result = TowerContest.solve(5, 10);
@@ -169,10 +153,8 @@ public class TowerContestTest {
         assertTrue(isValidResult(5, result));
     }
 
-    // ------------------------------------------------------------------ //
-    //  REQ 14 — h mayor que el maximo posible                            //
-    // ------------------------------------------------------------------ //
-
+   
+    //  REQ 14 — h mayor que el maximo posible                            
     @Test
     public void shouldReturnImpossibleLargeH() {
         assertEquals("impossible", TowerContest.solve(4, 999));

@@ -1,4 +1,6 @@
-package stackingItems;
+package Test;
+import stackingItems.TowerContest;
+
 
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -10,10 +12,6 @@ import static org.junit.Assert.*;
  * @version 1.0
  */
 public class TowerContestCTest {
-
-    // ------------------------------------------------------------------ //
-    //  Helper                                                             //
-    // ------------------------------------------------------------------ //
 
     private boolean isValidResult(int n, String result) {
         if ("impossible".equals(result)) return false;
@@ -79,10 +77,7 @@ public class TowerContestCTest {
         assertEquals("impossible", TowerContest.solve(2, 4));
     }
 
-    // ------------------------------------------------------------------ //
     //  Unico imposible dentro del rango para n >= 4                      //
-    // ------------------------------------------------------------------ //
-
     @Test
     public void missingValueN4() {
         assertEquals("impossible", TowerContest.solve(4, 8));
@@ -103,10 +98,8 @@ public class TowerContestCTest {
         assertEquals("impossible", TowerContest.solve(7, 35));
     }
 
-    // ------------------------------------------------------------------ //
-    //  Altura minima y maxima                                            //
-    // ------------------------------------------------------------------ //
-
+   
+    //  Altura minima y maxima                                           
     @Test
     public void minHeightN3() {
         assertTrue(isValidResult(3, TowerContest.solve(3, 5)));
@@ -138,10 +131,8 @@ public class TowerContestCTest {
         assertTrue(isValidResult(6, TowerContest.solve(6, 26)));
     }
 
-    // ------------------------------------------------------------------ //
-    //  Imposibles fuera de rango                                         //
-    // ------------------------------------------------------------------ //
 
+    //  Imposibles fuera de rango                                         
     @Test
     public void belowMinN5() {
         assertEquals("impossible", TowerContest.solve(5, 8));
@@ -152,10 +143,8 @@ public class TowerContestCTest {
         assertEquals("impossible", TowerContest.solve(4, 11));
     }
 
-    // ------------------------------------------------------------------ //
-    //  Todos los alcanzables para n=4 y n=5                             //
-    // ------------------------------------------------------------------ //
-
+    
+    //  Todos los alcanzables para n=4 y n=5                         
     @Test
     public void allAchievableN4() {
         assertTrue(isValidResult(4, TowerContest.solve(4,  7)));
