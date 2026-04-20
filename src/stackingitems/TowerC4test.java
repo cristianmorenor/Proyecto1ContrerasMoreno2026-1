@@ -3,7 +3,7 @@ package stackingitems;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
-
+//ciclo 4
 /**
  * Pruebas unitarias del ciclo 4.
  * Cubre los métodos nuevos: tipos de tazas (opener, hierarchical, greedy)
