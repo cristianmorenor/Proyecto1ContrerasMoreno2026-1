@@ -1,7 +1,7 @@
 package stackingitems;
 
 import shapes.Rectangle;
-
+// Clase base del sistema
 /**
  * Representa la tapa base de una taza.
  * Clase base para los demás tipos de tapa.

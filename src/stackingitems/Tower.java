@@ -3,6 +3,7 @@ package stackingitems;
 import shapes.Canvas;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+// Clase base del sistema
 
 /**
  * Representa una torre donde se apilan tazas y tapas.
