@@ -3,7 +3,7 @@ package stackingitems;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
+//prueba
 /**
  * Resuelve y simula el problema de la maratón ICPC 2025 "Stacking Cups".
  *
