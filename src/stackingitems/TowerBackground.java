@@ -2,7 +2,7 @@ package stackingitems;
 
 import shapes.Rectangle;
 import java.util.ArrayList;
-
+//clase auxiliar para dibujar tower
 /**
  * Dibuja las marcas de centímetros a la izquierda de la torre.
  * Ticks cortos cada 1 cm y ticks largos cada 5 cm, sin números.
