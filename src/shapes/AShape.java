@@ -1,5 +1,5 @@
 package shapes;
-
+//clase para refactor de shapes
 /**
  * Clase abstracta que representa una figura geométrica genérica.
  * Todas las figuras del paquete shapes heredan de esta clase.
