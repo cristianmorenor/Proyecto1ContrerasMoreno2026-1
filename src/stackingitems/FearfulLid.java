@@ -1,4 +1,4 @@
-package stackingItems;
+package stackingitems;
 
 /**
  * Tapa de tipo <b>fearful</b>: tiene dos comportamientos especiales:

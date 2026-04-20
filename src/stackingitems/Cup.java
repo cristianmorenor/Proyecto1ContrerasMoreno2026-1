@@ -1,4 +1,4 @@
-package stackingItems;
+package stackingitems;
 
 import shapes.Rectangle;
 

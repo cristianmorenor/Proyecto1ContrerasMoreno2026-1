@@ -1,4 +1,4 @@
-package stackingItems;
+package stackingitems;
 
 /**
  * Tapa de tipo <b>crazy</b>: en lugar de ubicarse encima de su taza,

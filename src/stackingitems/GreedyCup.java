@@ -1,4 +1,4 @@
-package stackingItems;
+package stackingitems;
 
 /**
  * Taza de tipo <b>greedy</b>: al entrar a la torre, intenta robar la tapa

@@ -1,4 +1,4 @@
-package stackingItems;
+package stackingitems;
 
 /**
  * Tapa de tipo normal: puede entrar y salir libremente de la torre.

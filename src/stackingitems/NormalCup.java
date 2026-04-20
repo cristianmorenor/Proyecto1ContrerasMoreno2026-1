@@ -1,4 +1,4 @@
-package stackingItems;
+package stackingitems;
 
 /**
  * Taza de tipo normal: comportamiento estándar al entrar a la torre.

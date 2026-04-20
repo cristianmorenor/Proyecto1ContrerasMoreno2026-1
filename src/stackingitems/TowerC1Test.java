@@ -1,6 +1,4 @@
-package Test;
-import stackingItems.Tower;
-
+package stackingitems;
 
 import org.junit.Test;
 import org.junit.Before;

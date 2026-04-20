@@ -1,4 +1,4 @@
-package stackingItems;
+package stackingitems;
 
 /**
  * Taza de tipo <b>opener</b>: al ser insertada en la torre, elimina

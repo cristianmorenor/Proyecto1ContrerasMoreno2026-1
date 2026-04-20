@@ -1,4 +1,4 @@
-package stackingItems;
+package stackingitems;
 
 /**
  * Taza de tipo <b>hierarchical</b>: al entrar a la torre va desplazando

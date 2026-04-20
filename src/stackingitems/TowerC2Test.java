@@ -1,5 +1,4 @@
-package Test;
-import stackingItems.Tower;
+package stackingitems;
 
 import org.junit.Test;
 import org.junit.Before;
@@ -22,8 +21,10 @@ public class TowerC2Test {
         tower = new Tower(200, 30);
     }
 
-    
-    //  REQ 10 — Constructor Tower(cups)  
+    // ------------------------------------------------------------------ //
+    //  REQ 10 — Constructor Tower(cups)                                   //
+    // ------------------------------------------------------------------ //
+
     @Test
     public void shouldCreateTowerWithNCups() {
         // Tower(4) debe crear tazas 1,2,3,4
@@ -55,9 +56,11 @@ public class TowerC2Test {
         assertFalse(t.ok());
     }
 
-    
-    //  REQ 11 — swap                                                     
-      @Test
+    // ------------------------------------------------------------------ //
+    //  REQ 11 — swap                                                      //
+    // ------------------------------------------------------------------ //
+
+    @Test
     public void shouldSwapTwoCups() {
         tower.pushCup(1);
         tower.pushCup(2);
@@ -104,8 +107,10 @@ public class TowerC2Test {
         assertEquals(4, tower.height()); // sin cambios
     }
 
-  
-    //  REQ 12 — cover                                                    
+    // ------------------------------------------------------------------ //
+    //  REQ 12 — cover                                                     //
+    // ------------------------------------------------------------------ //
+
     @Test
     public void shouldCoverAllCupsWhenTheyFit() {
         Tower t = new Tower(200, 30);
@@ -148,8 +153,10 @@ public class TowerC2Test {
         assertTrue(t.liddedCups().length >= 1);
     }
 
-    
-    //  REQ 13 — swapToReduce                                              
+    // ------------------------------------------------------------------ //
+    //  REQ 13 — swapToReduce                                              //
+    // ------------------------------------------------------------------ //
+
     @Test
     public void shouldReturnSwapThatReducesHeight() {
         // cup4(h=7) base, cup1(h=1) cima → altura = 8
