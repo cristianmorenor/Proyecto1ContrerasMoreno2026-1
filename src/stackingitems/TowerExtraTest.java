@@ -2,7 +2,7 @@ package stackingitems;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-
+//test extra para cobertura
 /**
  * Pruebas adicionales para aumentar cobertura.
  * Cubren rutas que normalmente quedan sin ejecutar.
