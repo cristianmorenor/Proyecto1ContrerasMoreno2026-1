@@ -34,7 +34,9 @@ El proyecto como se mencionó cuenta con pruebas unitarias que validan la lógic
 
 ## Analisis
 
-El análisis dinámico y estático del código permitieron mejorar la cobertura del código y corregir problemas de calidad. Para mas detalles leer los archivos de: [AnalisisDinamico](./AnalisisDinamico.md) [AnalisisEstatico](./AnalisisEstatico.md)
+El análisis dinámico y estático del código permitieron mejorar la cobertura del código y corregir problemas de calidad. Para mas detalles leer los archivos de: 
+[AnalisisDinamico](./AnalisisDinamico.md) 
+[AnalisisEstatico](./AnalisisEstatico.md)
 
 
 ## Retrospectivas
