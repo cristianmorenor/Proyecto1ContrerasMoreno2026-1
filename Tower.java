@@ -82,10 +82,8 @@ public class Tower {
         }
     }
 
-    // ------------------------------------------------------------------ //
-    //  GESTIÓN DE TAZAS                                                   //
-    // ------------------------------------------------------------------ //
-
+    
+    //  GESTIÓN DE TAZAS                                                 
     /**
      * Agrega una taza normal número n a la cima de la torre.
      *
@@ -205,9 +203,6 @@ public class Tower {
         ok = true;
     }
 
-    // ------------------------------------------------------------------ //
-    //  GESTIÓN DE TAPAS                                                   //
-    // ------------------------------------------------------------------ //
 
     /**
      * Agrega una tapa normal a la taza número n.
@@ -318,10 +313,7 @@ public class Tower {
         popLid(n);
     }
 
-    // ------------------------------------------------------------------ //
-    //  REORGANIZACIÓN                                                     //
-    // ------------------------------------------------------------------ //
-
+    //  REORGANIZACIÓN                                                     
     /**
      * Ordena las tazas de mayor a menor número (la mayor queda en la base).
      */
@@ -390,10 +382,8 @@ public class Tower {
         ok = true;
     }
 
-    // ------------------------------------------------------------------ //
-    //  CONSULTAS                                                          //
-    // ------------------------------------------------------------------ //
 
+    //  CONSULTAS                                                         
     /**
      * Retorna la altura total en cm de todos los elementos apilados.
      *
@@ -517,10 +507,8 @@ public class Tower {
              + " con " + result[1][0] + "-" + result[1][1];
     }
 
-    // ------------------------------------------------------------------ //
-    //  VISIBILIDAD                                                        //
-    // ------------------------------------------------------------------ //
 
+    //  VISIBILIDAD                                                        
     /** Hace visible la torre y todos sus elementos. */
     public void makeVisible() {
         visible = true;
@@ -549,10 +537,7 @@ public class Tower {
      */
     public boolean ok() { return ok; }
 
-    // ------------------------------------------------------------------ //
-    //  PRIVADOS - FÁBRICA DE OBJETOS                                     //
-    // ------------------------------------------------------------------ //
-
+    //  PRIVADOS - FÁBRICA DE OBJETOS                                     
     private Cup createCup(String type, int n) {
         int w = calculateWidth(n);
         switch (type) {
@@ -571,10 +556,7 @@ public class Tower {
         }
     }
 
-    // ------------------------------------------------------------------ //
     //  PRIVADOS - LÓGICA DE TIPOS ESPECIALES                             //
-    // ------------------------------------------------------------------ //
-
     /**
      * Elimina todas las tapas de todas las tazas de la torre.
      * Usado por OpenerCup al entrar.
@@ -636,9 +618,6 @@ public class Tower {
         }
     }
 
-    // ------------------------------------------------------------------ //
-    //  PRIVADOS - UTILIDADES                                              //
-    // ------------------------------------------------------------------ //
 
     private int calculateWidth(int n) {
         return 20 + (n * 15);
