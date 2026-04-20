@@ -50,11 +50,8 @@ public class TowerAtest {
         }
     }
 
-    // ================================================================== //
-    //  PRUEBA DE ACEPTACIÓN 1                                            //
-    //  Demuestra todos los tipos de tazas y tapas en una misma torre.   //
-    // ================================================================== //
-
+    //  PRUEBA DE ACEPTACIÓN 1                                            
+    //  Demuestra todos los tipos de tazas y tapas en una misma torre.   
     /**
      * Prueba de aceptación 1:
      * Se construye una torre con tazas normal, opener, hierarchical y greedy,
@@ -140,11 +137,8 @@ public class TowerAtest {
         tower.exit();
     }
 
-    // ================================================================== //
-    //  PRUEBA DE ACEPTACIÓN 2                                            //
-    //  Demuestra reorganización: order, reverse, swap y cover.          //
-    // ================================================================== //
-
+    //  PRUEBA DE ACEPTACIÓN 2                                       
+    //  Demuestra reorganización: order, reverse, swap y coverr. 
     /**
      * Prueba de aceptación 2:
      * Se construye una torre desordenada y se aplican orderTower, reverseTower,
@@ -213,10 +207,7 @@ public class TowerAtest {
         tower.exit();
     }
 
-    // ------------------------------------------------------------------ //
-    //  MAIN - ejecuta ambas pruebas de aceptación                        //
-    // ------------------------------------------------------------------ //
-
+    //  MAIN para ejecutar ambas pruebas de aceptación                        
     /**
      * Punto de entrada para ejecutar las pruebas de aceptación.
      *
